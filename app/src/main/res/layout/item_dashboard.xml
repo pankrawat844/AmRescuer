@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/profile_image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fb"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#FF000000"/>
+
+        <custom_font.Aeh
+            android:id="@+id/name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pankaj"
+            android:textColor="#242a39"
+            android:textSize="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/profile_image"
+            />
+    <custom_font.Aeh
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 hours"
+        android:textColor="#242a39"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/name"
+        android:layout_toRightOf="@+id/profile_image"
+
+        />
+
+    />
+    <custom_font.Aeh
+        android:id="@+id/des"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="3 hours"
+        android:textColor="#242a39"
+        android:layout_marginTop="10dp"
+        android:layout_below="@+id/profile_image"
+        />
+
+</RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>
