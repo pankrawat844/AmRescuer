@@ -28,9 +28,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_add_black_24dp" />
-                            <entry key="sourceFile" value="C:\Users\KLIFF I5\Downloads\iconfinder_BT_menu_905539.svg" />
+                            <entry key="outputName" value="logo" />
+                            <entry key="sourceFile" value="C:\Users\KLIFF I5\Desktop\Artboard 1 copy.svg" />
                           </map>
                         </option>
                       </PersistentState>

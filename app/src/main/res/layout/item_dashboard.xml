@@ -46,7 +46,7 @@
         android:id="@+id/des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="3 hours"
+        android:text="Loeram Lupsum thamus sapsum"
         android:textColor="#242a39"
         android:layout_marginTop="10dp"
         android:layout_below="@+id/profile_image"
