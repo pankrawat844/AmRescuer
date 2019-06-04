@@ -13,8 +13,8 @@
         <de.hdodenhof.circleimageview.CircleImageView
             xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/profile_image"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:src="@drawable/fb"
             app:civ_border_width="2dp"
             app:civ_border_color="#FF000000"/>
@@ -38,7 +38,6 @@
         android:layout_marginTop="10dp"
         android:layout_below="@+id/name"
         android:layout_toRightOf="@+id/profile_image"
-
         />
 
     />
@@ -46,11 +45,19 @@
         android:id="@+id/des"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Loeram Lupsum thamus sapsum"
+        android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
         android:textColor="#242a39"
         android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
         android:layout_below="@+id/profile_image"
         />
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/img"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@+id/des"
+        android:layout_marginTop="10dp"
+       />
 
 </RelativeLayout>
     </androidx.cardview.widget.CardView>

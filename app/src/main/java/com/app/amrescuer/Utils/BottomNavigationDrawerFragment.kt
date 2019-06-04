@@ -23,7 +23,7 @@ class BottomNavigationDrawerFragment:BottomSheetDialogFragment()
 
             when(menuItem!!.itemId)
             {
-                R.id.nav_camera ->
+                R.id.dashboard ->
 
                     Toast.makeText(context, "camera clicked", Toast.LENGTH_SHORT).show()
                          BottomSheetBehavior.STATE_HIDDEN-> dismiss()
