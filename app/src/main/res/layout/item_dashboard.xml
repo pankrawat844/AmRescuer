@@ -51,7 +51,7 @@
         android:layout_marginLeft="10dp"
         android:layout_below="@+id/profile_image"
         />
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.viewpager.widget.ViewPager
         android:id="@+id/img"
         android:layout_width="match_parent"
         android:layout_height="200dp"
