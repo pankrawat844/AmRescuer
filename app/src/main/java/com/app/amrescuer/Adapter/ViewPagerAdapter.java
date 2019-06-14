@@ -1,5 +1,7 @@
 package com.app.amrescuer.Adapter;
 
+import com.app.amrescuer.Fragment.SliderFragment;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -16,7 +18,7 @@ class ViewPagerAdaptere extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return null;
+        return new SliderFragment();
     }
 
     @Override
