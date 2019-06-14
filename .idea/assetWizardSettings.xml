@@ -30,8 +30,11 @@
                           <map>
                             <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="logo" />
+                            <entry key="height" value="1111" />
+                            <entry key="outputName" value="ic_artboard_1_copy" />
+                            <entry key="overrideSize" value="true" />
                             <entry key="sourceFile" value="C:\Users\KLIFF I5\Desktop\Artboard 1 copy.svg" />
+                            <entry key="width" value="1111" />
                           </map>
                         </option>
                       </PersistentState>
