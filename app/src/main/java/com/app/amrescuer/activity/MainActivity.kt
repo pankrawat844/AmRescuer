@@ -1,16 +1,14 @@
-package com.app.amrescuer.Activity
+package com.app.amrescuer.activity
 
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
-import com.google.android.material.navigation.NavigationView
-import androidx.core.view.GravityCompat
-import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
+import com.app.amrescuer.Fragment.HomeFragment
+import com.app.amrescuer.Fragment.SliderFragment1
 import com.app.amrescuer.R
-import com.app.amrescuer.Utils.BottomNavigationDrawerFragment
-import kotlinx.android.synthetic.main.activitymain.*
+import com.app.amrescuer.utils.BottomNavigationDrawerFragment
 import kotlinx.android.synthetic.main.app_bar_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -24,6 +22,9 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
+        val homeFragment= HomeFragment()
+        val trasation=supportFragmentManager.beginTransaction().replace(R.id.frame_layout,homeFragment)
+        trasation.commit()
 
 
 
@@ -48,8 +49,18 @@ class MainActivity : AppCompatActivity() {
         // as you specify a parent activity in AndroidManifest.xml.
         when (item.itemId) {
             android.R.id.home -> {
+
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+                return true
+            }
+
+            R.id.nav_gallery ->
+            {
+                val frag=SliderFragment1()
+               val support= supportFragmentManager.beginTransaction().replace(R.id.frame_layout,frag)
+                support.commit()
+//                Toast.makeText(applicationContext,"clicked",Toast.LENGTH_LONG).show()
                 return true
             }
         }

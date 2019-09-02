@@ -1,6 +1,5 @@
 package com.app.amrescuer.Adapter;
 
-import com.app.amrescuer.Fragment.SliderFragment;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -8,6 +7,8 @@ import java.util.List;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
+
+import com.app.amrescuer.Fragment.SliderFragment1;
 
 class ViewPagerAdaptere extends FragmentPagerAdapter {
     List<String> list= new ArrayList<>();
@@ -18,7 +19,7 @@ class ViewPagerAdaptere extends FragmentPagerAdapter {
 
     @Override
     public Fragment getItem(int position) {
-        return new SliderFragment();
+        return null;
     }
 
     @Override

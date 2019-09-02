@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#3F51B5</color>
-    <color name="colorPrimaryDark">#303F9F</color>
-    <color name="colorAccent">#FF4081</color>
+    <color name="colorPrimary">#f20056</color>
+    <color name="colorPrimaryDark">#f20056</color>
+    <color name="colorAccent">#f20056</color>
+    <color name="navigation_drawer">#FFFFFF</color>
+    <color name="toolbar">#f20056</color>
+
+    <color name="cat_name_bg">#E4E4E4</color>
+    <color name="textView_subTitle_adapter">#686868</color>
+
 </resources>
