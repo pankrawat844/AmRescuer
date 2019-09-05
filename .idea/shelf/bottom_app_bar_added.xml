@@ -1,0 +1,9 @@
+<changelist name="bottom_app_bar_added" date="1560429261610" recycled="false">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/bottom_app_bar_added/shelved.patch" />
+  <option name="DESCRIPTION" value="bottom app bar added" />
+  <binary>
+    <option name="BEFORE_PATH" value=".idea/caches/build_file_checksums.ser" />
+    <option name="AFTER_PATH" value=".idea/caches/build_file_checksums.ser" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/bottom_app_bar_added/build_file_checksums.ser" />
+  </binary>
+</changelist>

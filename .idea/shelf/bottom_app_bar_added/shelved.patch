@@ -1,0 +1,193 @@
+Index: app/build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>apply plugin: 'com.android.application'\r\n\r\napply plugin: 'kotlin-android'\r\n\r\napply plugin: 'kotlin-android-extensions'\r\n\r\nandroid {\r\n    compileSdkVersion 28\r\n    defaultConfig {\r\n        applicationId \"com.app.amrescuer\"\r\n        minSdkVersion 14\r\n        targetSdkVersion 28\r\n        versionCode 2\r\n        versionName \"1.1\"\r\n        testInstrumentationRunner \"androidx.test.runner.AndroidJUnitRunner\"\r\n    }\r\n    buildTypes {\r\n        release {\r\n            minifyEnabled false\r\n            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'\r\n        }\r\n    }\r\n    buildToolsVersion '28.0.2'\r\n\r\n}\r\n\r\ndependencies {\r\n    implementation fileTree(include: ['*.jar'], dir: 'libs')\r\n    implementation \"org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version\"\r\n    implementation 'androidx.appcompat:appcompat:1.0.0'\r\n    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'\r\n    implementation 'androidx.legacy:legacy-support-v4:1.0.0'\r\n        implementation 'com.google.android.material:material:1.0.0-alpha1'\r\n//    implementation 'com.google.android.material:material:1.1.0-alpha06'\r\n    testImplementation 'junit:junit:4.12'\r\n    androidTestImplementation 'androidx.test:runner:1.1.0'\r\n    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'\r\n}\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/build.gradle	(revision f87b01e84558a40faf43c5c41463488bd5e8460d)
++++ app/build.gradle	(date 1560428804176)
+@@ -30,7 +30,9 @@
+     implementation 'androidx.appcompat:appcompat:1.0.0'
+     implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+-        implementation 'com.google.android.material:material:1.0.0-alpha1'
++    implementation 'com.google.android.material:material:1.0.0-alpha1'
++    implementation 'de.hdodenhof:circleimageview:3.0.0'
++
+ //    implementation 'com.google.android.material:material:1.1.0-alpha06'
+     testImplementation 'junit:junit:4.12'
+     androidTestImplementation 'androidx.test:runner:1.1.0'
+Index: app/src/main/res/values/strings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><resources>\r\n    <string name=\"app_name\">Am Rescuer</string>\r\n    <string name=\"title_activity_main\">Home</string>\r\n    <string name=\"navigation_drawer_open\">Open navigation drawer</string>\r\n    <string name=\"navigation_drawer_close\">Close navigation drawer</string>\r\n    <string name=\"nav_header_title\">Android Studio</string>\r\n    <string name=\"nav_header_subtitle\">android.studio@android.com</string>\r\n    <string name=\"nav_header_desc\">Navigation header</string>\r\n    <string name=\"action_settings\">Settings</string>\r\n</resources>\r\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/values/strings.xml	(revision f87b01e84558a40faf43c5c41463488bd5e8460d)
++++ app/src/main/res/values/strings.xml	(date 1560428805192)
+@@ -7,4 +7,7 @@
+     <string name="nav_header_subtitle">android.studio@android.com</string>
+     <string name="nav_header_desc">Navigation header</string>
+     <string name="action_settings">Settings</string>
++
++    <!-- TODO: Remove or change this placeholder text -->
++    <string name="hello_blank_fragment">Hello blank fragment</string>
+ </resources>
+Index: .idea/misc.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"NullableNotNullManager\">\r\n    <option name=\"myDefaultNullable\" value=\"android.support.annotation.Nullable\" />\r\n    <option name=\"myDefaultNotNull\" value=\"android.support.annotation.NonNull\" />\r\n    <option name=\"myNullables\">\r\n      <value>\r\n        <list size=\"10\">\r\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.Nullable\" />\r\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nullable\" />\r\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"javax.annotation.CheckForNull\" />\r\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.Nullable\" />\r\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.Nullable\" />\r\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.Nullable\" />\r\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.RecentlyNullable\" />\r\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.Nullable\" />\r\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableDecl\" />\r\n          <item index=\"9\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NullableType\" />\r\n        </list>\r\n      </value>\r\n    </option>\r\n    <option name=\"myNotNulls\">\r\n      <value>\r\n        <list size=\"9\">\r\n          <item index=\"0\" class=\"java.lang.String\" itemvalue=\"org.jetbrains.annotations.NotNull\" />\r\n          <item index=\"1\" class=\"java.lang.String\" itemvalue=\"javax.annotation.Nonnull\" />\r\n          <item index=\"2\" class=\"java.lang.String\" itemvalue=\"edu.umd.cs.findbugs.annotations.NonNull\" />\r\n          <item index=\"3\" class=\"java.lang.String\" itemvalue=\"android.support.annotation.NonNull\" />\r\n          <item index=\"4\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.NonNull\" />\r\n          <item index=\"5\" class=\"java.lang.String\" itemvalue=\"androidx.annotation.RecentlyNonNull\" />\r\n          <item index=\"6\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.qual.NonNull\" />\r\n          <item index=\"7\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullDecl\" />\r\n          <item index=\"8\" class=\"java.lang.String\" itemvalue=\"org.checkerframework.checker.nullness.compatqual.NonNullType\" />\r\n        </list>\r\n      </value>\r\n    </option>\r\n  </component>\r\n  <component name=\"ProjectRootManager\" version=\"2\" languageLevel=\"JDK_1_8\" project-jdk-name=\"1.8\" project-jdk-type=\"JavaSDK\">\r\n    <output url=\"file://$PROJECT_DIR$/build/classes\" />\r\n  </component>\r\n  <component name=\"ProjectType\">\r\n    <option name=\"id\" value=\"Android\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/misc.xml	(revision f87b01e84558a40faf43c5c41463488bd5e8460d)
++++ .idea/misc.xml	(date 1560406469028)
+@@ -35,7 +35,7 @@
+       </value>
+     </option>
+   </component>
+-  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_8" project-jdk-name="1.8" project-jdk-type="JavaSDK">
++  <component name="ProjectRootManager" version="2" languageLevel="JDK_1_7" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+     <output url="file://$PROJECT_DIR$/build/classes" />
+   </component>
+   <component name="ProjectType">
+Index: app/src/main/res/layout/fragment_view_pager.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/fragment_view_pager.xml	(date 1560428901568)
++++ app/src/main/res/layout/fragment_view_pager.xml	(date 1560428901568)
+@@ -0,0 +1,15 @@
++<?xml version="1.0" encoding="utf-8"?>
++<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
++    xmlns:tools="http://schemas.android.com/tools"
++    android:layout_width="match_parent"
++    android:layout_height="match_parent"
++    tools:context=".Fragment.ViewPagerragment">
++
++    <!-- TODO: Update blank fragment layout -->
++    <ImageView
++        android:id="@+id/imageView"
++        android:layout_width="match_parent"
++        android:layout_height="match_parent"
++        />
++
++</FrameLayout>
+\ No newline at end of file
+Index: app/src/main/java/com/app/amrescuer/Fragment/ViewPagerragment.kt
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/app/amrescuer/Fragment/ViewPagerragment.kt	(date 1560428803944)
++++ app/src/main/java/com/app/amrescuer/Fragment/ViewPagerragment.kt	(date 1560428803944)
+@@ -0,0 +1,30 @@
++package com.app.amrescuer.Fragment
++
++
++import android.os.Bundle
++import androidx.fragment.app.Fragment
++import android.view.LayoutInflater
++import android.view.View
++import android.view.ViewGroup
++
++import com.app.amrescuer.R
++
++// TODO: Rename parameter arguments, choose names that match
++// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
++private const val ARG_PARAM1 = "param1"
++private const val ARG_PARAM2 = "param2"
++
++/**
++ * A simple [Fragment] subclass.
++ *
++ */
++class ViewPagerragment : Fragment() {
++
++    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
++                              savedInstanceState: Bundle?): View? {
++        // Inflate the layout for this fragment
++        return inflater.inflate(R.layout.fragment_view_pager, container, false)
++    }
++
++
++}
+Index: app/src/main/java/com/app/amrescuer/Utils/ViewPageAdapter.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/java/com/app/amrescuer/Utils/ViewPageAdapter.java	(date 1560429111376)
++++ app/src/main/java/com/app/amrescuer/Utils/ViewPageAdapter.java	(date 1560429111376)
+@@ -0,0 +1,29 @@
++package com.app.amrescuer.Utils;
++
++import android.widget.ImageView;
++
++import com.app.amrescuer.Fragment.ViewPagerragment;
++
++import java.util.ArrayList;
++import java.util.List;
++
++import androidx.fragment.app.Fragment;
++import androidx.fragment.app.FragmentManager;
++import androidx.fragment.app.FragmentPagerAdapter;
++
++public class ViewPageAdapter extends FragmentPagerAdapter {
++    List<String> list= new ArrayList<>();
++    public ViewPageAdapter(FragmentManager fm,List<String> list) {
++        super(fm);
++    }
++
++    @Override
++    public Fragment getItem(int position) {
++        return new ViewPagerragment();
++    }
++
++    @Override
++    public int getCount() {
++        return list.size();
++    }
++}
+Index: app/src/main/res/layout/item_dashboard.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<LinearLayout xmlns:android=\"http://schemas.android.com/apk/res/android\"\r\n    android:orientation=\"vertical\" android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n\r\n    <androidx.cardview.widget.CardView\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"wrap_content\">\r\n\r\n<RelativeLayout\r\n    android:layout_width=\"match_parent\"\r\n    android:layout_height=\"match_parent\">\r\n        <de.hdodenhof.circleimageview.CircleImageView\r\n            xmlns:app=\"http://schemas.android.com/apk/res-auto\"\r\n            android:id=\"@+id/profile_image\"\r\n            android:layout_width=\"100dp\"\r\n            android:layout_height=\"100dp\"\r\n            android:src=\"@drawable/fb\"\r\n            app:civ_border_width=\"2dp\"\r\n            app:civ_border_color=\"#FF000000\"/>\r\n\r\n        <custom_font.Aeh\r\n            android:id=\"@+id/name\"\r\n            android:layout_width=\"wrap_content\"\r\n            android:layout_height=\"wrap_content\"\r\n            android:text=\"Pankaj\"\r\n            android:textColor=\"#242a39\"\r\n            android:textSize=\"17dp\"\r\n            android:layout_marginTop=\"10dp\"\r\n            android:layout_toRightOf=\"@+id/profile_image\"\r\n            />\r\n    <custom_font.Aeh\r\n        android:id=\"@+id/date\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"3 hours\"\r\n        android:textColor=\"#242a39\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:layout_below=\"@+id/name\"\r\n        android:layout_toRightOf=\"@+id/profile_image\"\r\n        />\r\n\r\n    />\r\n    <custom_font.Aeh\r\n        android:id=\"@+id/des\"\r\n        android:layout_width=\"wrap_content\"\r\n        android:layout_height=\"wrap_content\"\r\n        android:text=\"Lorem Ipsum is simply dummy text of the printing and typesetting industry.\"\r\n        android:textColor=\"#242a39\"\r\n        android:layout_marginTop=\"10dp\"\r\n        android:layout_marginLeft=\"10dp\"\r\n        android:layout_below=\"@+id/profile_image\"\r\n        />\r\n    <androidx.recyclerview.widget.RecyclerView\r\n        android:id=\"@+id/img\"\r\n        android:layout_width=\"match_parent\"\r\n        android:layout_height=\"200dp\"\r\n        android:layout_below=\"@+id/des\"\r\n        android:layout_marginTop=\"10dp\"\r\n       />\r\n\r\n</RelativeLayout>\r\n    </androidx.cardview.widget.CardView>\r\n</LinearLayout>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- app/src/main/res/layout/item_dashboard.xml	(revision f87b01e84558a40faf43c5c41463488bd5e8460d)
++++ app/src/main/res/layout/item_dashboard.xml	(date 1560428144446)
+@@ -51,8 +51,8 @@
+         android:layout_marginLeft="10dp"
+         android:layout_below="@+id/profile_image"
+         />
+-    <androidx.recyclerview.widget.RecyclerView
+-        android:id="@+id/img"
++    <androidx.viewpager.widget.ViewPager
++        android:id="@+id/viewpage"
+         android:layout_width="match_parent"
+         android:layout_height="200dp"
+         android:layout_below="@+id/des"
+Index: .idea/encodings.xml
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><?xml version=\"1.0\" encoding=\"UTF-8\"?>\r\n<project version=\"4\">\r\n  <component name=\"Encoding\">\r\n    <file url=\"PROJECT\" charset=\"UTF-8\" />\r\n  </component>\r\n</project>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+--- .idea/encodings.xml	(revision f87b01e84558a40faf43c5c41463488bd5e8460d)
++++ .idea/encodings.xml	(date 1560427806387)
+@@ -1,6 +1,8 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+ <project version="4">
+   <component name="Encoding">
++    <file url="file://$PROJECT_DIR$/app/src/main/java/com/app/amrescuer/Utils/CFlipper.java" charset="windows-1252" />
++    <file url="file://$PROJECT_DIR$/app/src/main/java/com/app/amrescuer/Utils/DrawCanvasDot.java" charset="windows-1252" />
+     <file url="PROJECT" charset="UTF-8" />
+   </component>
+ </project>
+\ No newline at end of file

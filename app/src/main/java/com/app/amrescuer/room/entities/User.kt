@@ -5,7 +5,7 @@ import androidx.room.PrimaryKey
 
 const val CURRENT_USER_ID=0
 @Entity
-data class User (val id:Int,
+data class User (val id:String,
                  val name:String,
                  val password:String,
                  val email:String)

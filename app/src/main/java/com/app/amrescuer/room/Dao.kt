@@ -13,7 +13,7 @@ import com.app.amrescuer.room.entities.User
 interface UserDao{
 
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    fun updatenInsert(user:User):Long
+    suspend fun updatenInsert(user:User):Long
 
     @Query("select * from user where uid=$CURRENT_USER_ID")
     fun getUserData():LiveData<User>

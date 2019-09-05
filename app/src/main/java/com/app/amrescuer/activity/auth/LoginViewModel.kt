@@ -3,12 +3,18 @@ package com.app.amrescuer.activity.auth
 import android.view.View
 import androidx.lifecycle.ViewModel
 import com.app.amrescuer.repositories.UserRepository
+import com.app.amrescuer.utils.ApiException
+import com.app.amrescuer.utils.Coroutines
 
-class LoginViewModel:ViewModel()
+class LoginViewModel(
+        private val respositer:UserRepository
+
+):ViewModel()
 {
     var email:String?=null
     var password:String?=null
     var authListner:LoginListner?=null
+    fun getLoggedinUser()= respositer.getUser()
     fun onLoginButtonClick(view:View)
     {
         authListner?.onStarted()
@@ -17,7 +23,26 @@ class LoginViewModel:ViewModel()
         authListner?.onFailure("Please Enter Email Or Password")
             return
         }
-        val loginresponse=UserRepository().Userlogin(email!!,password!!)
-        authListner?.onSuccess(loginresponse)
+
+        Coroutines.main{
+            try {
+                val response=respositer.Userlogin(email!!,password!!)
+                response?.response?.let {
+                    authListner?.onSuccess(it)
+                    respositer.saveUser(it)
+                    return@main
+                }
+                authListner?.onFailure("Something went Wrong" )
+
+
+            }catch (e:ApiException)
+            {
+                authListner?.onFailure(e.message!! )
+
+            }
+
+
+
+        }
     }
 }
