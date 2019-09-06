@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.app.amrescuer.repositories.UserRepository
 import com.app.amrescuer.utils.ApiException
 import com.app.amrescuer.utils.Coroutines
+import com.app.amrescuer.utils.NoInternetConnection
 
 class LoginViewModel(
         private val respositer:UserRepository
@@ -36,6 +37,10 @@ class LoginViewModel(
 
 
             }catch (e:ApiException)
+            {
+                authListner?.onFailure(e.message!! )
+
+            }catch (e:NoInternetConnection)
             {
                 authListner?.onFailure(e.message!! )
 

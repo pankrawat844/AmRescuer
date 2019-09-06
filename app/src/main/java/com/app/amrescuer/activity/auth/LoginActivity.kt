@@ -9,11 +9,13 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
+import com.app.amrescuer.App
 import com.app.amrescuer.R
 import com.app.amrescuer.activity.MainActivity
 import com.app.amrescuer.utils.toast
 import com.app.amrescuer.databinding.LoginBinding
 import com.app.amrescuer.network.MyApi
+import com.app.amrescuer.network.NetworkInterceptor
 import com.app.amrescuer.repositories.UserRepository
 import com.app.amrescuer.room.AppDatabase
 import com.app.amrescuer.room.entities.User
@@ -21,17 +23,19 @@ import com.app.amrescuer.utils.hide
 import com.app.amrescuer.utils.show
 import com.app.amrescuer.utils.snackbar
 import kotlinx.android.synthetic.main.login.*
+import org.kodein.di.Kodein
+import org.kodein.di.KodeinAware
+import org.kodein.di.android.kodein
+import org.kodein.di.generic.instance
 import kotlin.math.log
 
-class LoginActivity : AppCompatActivity(),LoginListner {
+class LoginActivity : AppCompatActivity(),LoginListner,KodeinAware {
 
-
+    override val kodein by kodein()
+    private val factory:AuthViewModalFactory by instance()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val api=MyApi()
-        val db=AppDatabase(this)
-        val repository=UserRepository(api,db)
-        val factory= AuthViewModalFactory(repository)
+
         val bind:LoginBinding=DataBindingUtil.setContentView(this,R.layout.login)
         val viewModel:LoginViewModel=ViewModelProviders.of(this,factory).get(LoginViewModel::class.java)
         bind.data=viewModel;

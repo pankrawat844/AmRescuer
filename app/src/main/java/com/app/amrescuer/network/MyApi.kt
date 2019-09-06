@@ -1,5 +1,6 @@
 package com.app.amrescuer.network
 
+import okhttp3.OkHttpClient
 import okhttp3.ResponseBody
 import retrofit2.Call
 import retrofit2.Response
@@ -18,9 +19,15 @@ interface MyApi {
                   @Field("password") password:String):Response<AuthResponse>
 
     companion object{
-        operator fun invoke():MyApi{
+        operator fun invoke(
+                networkInterceptor: NetworkInterceptor
+        ):MyApi{
+            val okHttpClient= OkHttpClient.Builder()
+                    .addInterceptor(networkInterceptor)
+                    .build()
              return Retrofit.Builder()
                      .baseUrl("https://ukfashion.000webhostapp.com/am_secure/")
+                     .client(okHttpClient)
                      .addConverterFactory(GsonConverterFactory.create())
                      .build()
                      .create(MyApi::class.java)
