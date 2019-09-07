@@ -166,6 +166,7 @@
                 android:layout_height="wrap_content"
                 android:text="Don't Have An Account ?"
                 android:textSize="13dp"
+                android:onClick="@{data::OnCreateAccountClick}"
                 android:textColor="#2C3646"
                 />
             <custom_font.MyTextView

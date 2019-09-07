@@ -30,6 +30,9 @@ import org.kodein.di.generic.instance
 import kotlin.math.log
 
 class LoginActivity : AppCompatActivity(),LoginListner,KodeinAware {
+    override fun onSuccess(msg: String) {
+
+    }
 
     override val kodein by kodein()
     private val factory:AuthViewModalFactory by instance()

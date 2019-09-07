@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.app.amrescuer.activity.auth.LoginViewModel" />
+    </data>
+
+<RelativeLayout
+    android:id="@+id/relative"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
    >
@@ -23,7 +34,7 @@
                 android:id="@+id/zoologo"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
-                android:src="@drawable/ic_launcher_foreground"/>
+                android:src="@drawable/logo_new"/>
 
           <LinearLayout
               android:layout_width="0dp"
@@ -71,12 +82,14 @@
 
 
         <custom_font.MyEditText
+            android:id="@+id/name"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="USERNAME"
+            android:hint="NAME"
             android:inputType="text"
             android:textColorHint="#a9b0c3"
             android:textSize="13dp"
+            android:text="@={viewmodel.name}"
             android:background="#00000000"
             android:layout_marginTop="42dp"
 
@@ -92,10 +105,12 @@
 
 
         <custom_font.MyEditText
+            android:id="@+id/email"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="EMAIL ADDRESS"
             android:inputType="text"
+            android:text="@={viewmodel.email}"
             android:textColorHint="#a9b0c3"
             android:layout_marginTop="32dp"
             android:textSize="13dp"
@@ -111,9 +126,11 @@
             />
 
         <custom_font.MyEditText
+            android:id="@+id/password"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="PASSWORD"
+            android:text="@={viewmodel.password}"
             android:inputType="textPassword"
             android:textColorHint="#a9b0c3"
             android:layout_marginTop="32dp"
@@ -129,14 +146,54 @@
             android:layout_marginTop="10dp"
             />
 
+        <custom_font.MyEditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="CONFIRM PASSWORD"
+            android:text="@={viewmodel.passwordconfirm}"
+            android:inputType="textPassword"
+            android:textColorHint="#a9b0c3"
+            android:layout_marginTop="32dp"
+            android:textSize="13dp"
+            android:background="#00000000"
 
+            />
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#a9b0c3"
+            android:layout_marginTop="10dp"
+            />
+
+        <custom_font.MyEditText
+            android:id="@+id/mobile"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="PHONE NO"
+            android:text="@={viewmodel.mobile}"
+            android:inputType="phone"
+            android:textColorHint="#a9b0c3"
+            android:layout_marginTop="32dp"
+            android:textSize="13dp"
+            android:background="#00000000"
+
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="#a9b0c3"
+            android:layout_marginTop="10dp"
+            />
         <custom_font.MyTextView
             android:id="@+id/login"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Signup"
             android:textStyle="bold"
+            android:onClick="@{viewmodel::OnSignupButtonClick}"
             android:background="@drawable/round"
             android:textColor="#CBD1DC"
             android:gravity="center"
@@ -189,6 +246,12 @@
         android:gravity="center"
         />
 
-
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
 
 </RelativeLayout>
+</layout>

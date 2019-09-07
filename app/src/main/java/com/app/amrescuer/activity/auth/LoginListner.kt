@@ -8,4 +8,5 @@ interface LoginListner {
     fun onStarted()
     fun onFailure(message:String)
     fun onSuccess(user:User)
+    fun onSuccess(msg:String)
 }

@@ -15,6 +15,7 @@ class ViewPagerAdaptere extends FragmentPagerAdapter {
     public ViewPagerAdaptere(FragmentManager fm, List<String> list) {
         super(fm);
         this.list=list;
+        list.add("df");
     }
 
     @Override
