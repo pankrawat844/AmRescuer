@@ -7,12 +7,15 @@
     tools:context=".activity.MainActivity">
 
 
+   <include layout="@layout/content_main"/>
 
-    <include layout="@layout/content_main" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/cordinator"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+
+        >
 
         <com.google.android.material.bottomappbar.BottomAppBar
             android:id="@+id/appbar"
@@ -25,9 +28,9 @@
             app:fabCradleRoundedCornerRadius="30dp"
             app:fabCradleVerticalOffset="10dp"
             app:hideOnScroll="true"
-            app:navigationIcon="@drawable/ic_iconfinder_bt_menu_905539"
             app:layout_scrollFlags="scroll|enterAlways"
             app:menu="@menu/activitymain_drawer"
+            app:navigationIcon="@drawable/ic_iconfinder_bt_menu_905539"
             app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
             app:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
 
@@ -37,6 +40,7 @@
             android:layout_height="wrap_content"
             android:src="@drawable/ic_add_black_24dp"
             app:fabCustomSize="70dp"
+            app:elevation="10dp"
             app:layout_anchor="@id/appbar" />
 
 

@@ -1,9 +1,13 @@
 package com.app.amrescuer
 
 import android.app.Application
+import com.app.amrescuer.fragment.profle.ProfileViewModel
+import com.app.amrescuer.fragment.profle.ProfileViewmodelFactory
 import com.app.amrescuer.activity.auth.AuthViewModalFactory
+import com.app.amrescuer.fragment.dashboard.DashboardViewFactory
 import com.app.amrescuer.network.MyApi
 import com.app.amrescuer.network.NetworkInterceptor
+import com.app.amrescuer.repositories.FeedRepository
 import com.app.amrescuer.repositories.UserRepository
 import com.app.amrescuer.room.AppDatabase
 import org.kodein.di.Kodein
@@ -22,6 +26,10 @@ class App:Application(),KodeinAware {
         bind() from  singleton { AppDatabase(instance()) }
         bind() from singleton { UserRepository(instance(),instance()) }
         bind() from provider { AuthViewModalFactory(instance()) }
+        bind() from provider { ProfileViewmodelFactory(instance())}
+        bind() from  singleton { ProfileViewModel(instance()) }
+        bind() from singleton { FeedRepository(instance(),instance()) }
+        bind() from provider { DashboardViewFactory(instance()) }
     }
 
 }

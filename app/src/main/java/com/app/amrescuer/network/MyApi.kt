@@ -12,7 +12,7 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 import com.google.gson.GsonBuilder
 import com.google.gson.Gson
-
+import retrofit2.http.GET
 
 
 interface MyApi {
@@ -31,6 +31,8 @@ interface MyApi {
             @Field("mobile") mobile:String
     ):Response<SignupResponse>
 
+    @GET("dashboard.php")
+    suspend fun getFeeds():Response<FeedsResponse>
     companion object{
         operator fun invoke(
                 networkInterceptor: NetworkInterceptor

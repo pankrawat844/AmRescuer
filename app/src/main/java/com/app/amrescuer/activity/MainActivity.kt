@@ -5,9 +5,11 @@ import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import android.view.Menu
 import android.view.MenuItem
-import com.app.amrescuer.Fragment.HomeFragment
-import com.app.amrescuer.Fragment.SliderFragment1
+import com.app.amrescuer.fragment.HomeFragment
+import com.app.amrescuer.fragment.SliderFragment1
 import com.app.amrescuer.R
+import com.app.amrescuer.fragment.dashboard.DashboardFragment
+import com.app.amrescuer.fragment.profle.ProfileFragment
 import com.app.amrescuer.utils.BottomNavigationDrawerFragment
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -22,7 +24,11 @@ class MainActivity : AppCompatActivity() {
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
         }
-        val homeFragment= HomeFragment()
+
+//        val navController=Navigation.findNavController(this,R.id.fragment)
+//        appbar.setupWithNavController(navController)
+//        NavigationUI.setupActionBarWithNavController(this,navController)
+        val homeFragment= DashboardFragment()
         val trasation=supportFragmentManager.beginTransaction().replace(R.id.frame_layout,homeFragment)
         trasation.commit()
 
@@ -52,6 +58,7 @@ class MainActivity : AppCompatActivity() {
 
                 val bottomNavDrawerFragment = BottomNavigationDrawerFragment()
                 bottomNavDrawerFragment.show(supportFragmentManager, bottomNavDrawerFragment.tag)
+
                 return true
             }
 

@@ -4,7 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.app.amrescuer.Fragment.SliderFragment1
+import com.app.amrescuer.fragment.SliderFragment1
 import com.app.amrescuer.R
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
 import kotlinx.android.synthetic.main.fragment_bottomsheet.*
@@ -21,7 +21,7 @@ class BottomNavigationDrawerFragment:BottomSheetDialogFragment()
         navigation_view.setNavigationItemSelectedListener { menuItem ->
 
             when(menuItem!!.itemId) {
-                R.id.dashboard -> {
+                R.id.fragment_home -> {
 
 //                Toast.makeText(context, "camera clicked", Toast.LENGTH_SHORT).show()
 //                        BottomSheetBehavior . STATE_HIDDEN -> dismiss()

@@ -24,8 +24,8 @@ android {
         }
     }
     buildToolsVersion '28.0.2'
-    dataBinding{
-        enabled=true
+    dataBinding {
+        enabled = true
     }
 }
 
@@ -39,6 +39,7 @@ dependencies {
     implementation 'com.makeramen:roundedimageview:2.3.0'
 
 //    implementation 'com.google.android.material:material:1.1.0-alpha06'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.1.0'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.1.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0'
