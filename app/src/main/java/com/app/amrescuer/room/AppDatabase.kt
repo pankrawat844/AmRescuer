@@ -31,5 +31,5 @@ abstract fun getFeedsDao():FeedDao
                                 AppDatabase::class.java,
                                 "Mydatabase.db").build()
 
-    }
+        }
 }

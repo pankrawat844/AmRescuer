@@ -10,4 +10,7 @@ data class Feed(
                 val title:String,
                 val message:String,
                 val user_id:String,
-                val image:String)
+                val image:String,
+                val created_at:String,
+                val likes:String,
+                val comments:String)

@@ -28,10 +28,10 @@
                         </option>
                         <option name="values">
                           <map>
+                            <entry key="assetSourceType" value="FILE" />
                             <entry key="color" value="ffffff" />
-                            <entry key="outputName" value="ic_person_black_24dp" />
-                            <entry key="overrideSize" value="true" />
-                            <entry key="sourceFile" value="C:\Users\KLIFF I5\Desktop\Artboard 1 copy.svg" />
+                            <entry key="outputName" value="ic_iconfinder_user_male2_172626" />
+                            <entry key="sourceFile" value="C:\Users\KLIFF I5\Downloads\iconfinder_user_male2_172626.svg" />
                           </map>
                         </option>
                       </PersistentState>

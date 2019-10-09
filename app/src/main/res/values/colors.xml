@@ -9,4 +9,6 @@
     <color name="cat_name_bg">#E4E4E4</color>
     <color name="textView_subTitle_adapter">#686868</color>
 
+    <color name="viewgrey">#DCDCDC</color>
 </resources>
+
