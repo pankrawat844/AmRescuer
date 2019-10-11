@@ -25,11 +25,9 @@
         android:orientation="horizontal">
 
         <de.hdodenhof.circleimageview.CircleImageView
-            xmlns:app="http://schemas.android.com/apk/res-auto"
             android:id="@+id/post_profile_image"
             android:layout_width="30dp"
             android:layout_height="30dp"
-
             android:src="@drawable/ic_iconfinder_user_male2_172626"
             android:layout_marginEnd="7dp"/>
 
@@ -38,6 +36,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:textSize="15sp"
+            android:text="@{feed.userName}"
             android:id="@+id/txtpostname"
             android:layout_weight="1"
             android:textColor="@android:color/black"/>
@@ -58,6 +57,7 @@
             android:textSize="15sp"
             android:layout_weight="1"
             android:text="@{feed.title}"
+            android:textStyle="bold"
             android:textColor="@android:color/black"/>
 
         <TextView
@@ -70,8 +70,8 @@
             android:textColor="@android:color/black"/>
         <ImageView
             android:layout_width="match_parent"
-            android:layout_height="400dp"
-
+            android:layout_height="300dp"
+            feedimg="@{feed.image}"
             android:layout_marginTop="10dp"
             android:id="@+id/postimage"/>
     <LinearLayout

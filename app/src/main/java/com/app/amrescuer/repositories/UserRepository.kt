@@ -31,7 +31,9 @@ class UserRepository(
     ):SignupResponse
     {
 //        Log.e("response",apiRequest{api.uerSignup(name,email,password,mobile)}.response!!)
-        return apiRequest{api.uerSignup(name,email,password,mobile)}
+        return apiRequest{
+            api.uerSignup(name,email,password,mobile)
+        }
     }
     fun getUser()=db.getUserDao().getUserData()
 }

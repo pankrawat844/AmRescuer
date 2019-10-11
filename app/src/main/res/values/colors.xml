@@ -10,5 +10,11 @@
     <color name="textView_subTitle_adapter">#686868</color>
 
     <color name="viewgrey">#DCDCDC</color>
+    <color name="timestamp">#a0a3a7</color>
+    <color name="link">#0a80d1</color>
+    <color name="white">#ffffff</color>
+    <color name="feed_item_bg">#fff</color>
+    <color name="feed_item_border">#c2c3c8</color>
+    <color name="feed_bg">#d3d6db</color>
 </resources>
 

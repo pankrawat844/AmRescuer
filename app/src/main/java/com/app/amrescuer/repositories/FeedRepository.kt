@@ -42,7 +42,6 @@ class FeedRepository(
         if(isFetchNeeded())
         {
             val apiRequest=apiRequest { api.getFeeds() }
-
             feeds.postValue(apiRequest.response)
         }
     }
