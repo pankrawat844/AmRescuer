@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <data>
         <variable
             name="feed"
@@ -48,6 +49,8 @@
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="@{feed.userName}"
+                    android:textAllCaps="true"
+                    app:fontFamily="@font/aeh_font"
                     android:textSize="@dimen/feed_item_profile_name"
                     android:textStyle="bold" />
 
@@ -55,6 +58,7 @@
                     android:id="@+id/timestamp"
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
+                    android:text="@{feed.createdAt}"
                     android:textColor="@color/timestamp"
                     android:textSize="@dimen/feed_item_timestamp" />
             </LinearLayout>
@@ -66,6 +70,8 @@
             android:layout_height="wrap_content"
             android:paddingBottom="5dp"
             android:text="@{feed.title}"
+            app:fontFamily="@font/lato_regular"
+
             android:paddingLeft="@dimen/feed_item_status_pad_left_right"
             android:paddingRight="@dimen/feed_item_status_pad_left_right"
             android:paddingTop="@dimen/feed_item_status_pad_top" />
@@ -77,6 +83,7 @@
             android:linksClickable="true"
             android:paddingBottom="10dp"
             android:text="@{feed.message}"
+            app:fontFamily="@font/lato_regular"
             android:paddingLeft="@dimen/feed_item_status_pad_left_right"
             android:paddingRight="@dimen/feed_item_status_pad_left_right"
             android:textColorLink="@color/link" />

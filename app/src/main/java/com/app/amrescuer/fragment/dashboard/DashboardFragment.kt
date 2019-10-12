@@ -54,6 +54,7 @@ class DashboardFragment : Fragment(),KodeinAware {
     private fun initRecylerview(toFeedItem: List<FeedItem>) {
         val adapt=GroupAdapter<ViewHolder>().apply {
             addAll(toFeedItem)
+
         }
         recyclerview.apply {
             layoutManager=LinearLayoutManager(context)
@@ -61,6 +62,7 @@ class DashboardFragment : Fragment(),KodeinAware {
             adapter=adapt
 
         }
+
     }
 
     private fun List<Feed>.toFeedItem():List<FeedItem>{

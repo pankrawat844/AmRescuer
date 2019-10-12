@@ -16,5 +16,6 @@
     <color name="feed_item_bg">#fff</color>
     <color name="feed_item_border">#c2c3c8</color>
     <color name="feed_bg">#d3d6db</color>
+    <color name="txt_color">#1f2833</color>
 </resources>
 

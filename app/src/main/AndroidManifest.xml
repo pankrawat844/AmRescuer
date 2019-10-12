@@ -12,7 +12,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-        <activity android:name=".activity.auth.SignupActivity"></activity>
+        <activity android:name=".activity.feeddetail.FeedDetailActivity"></activity>
+        <activity android:name=".activity.auth.SignupActivity" />
         <activity
             android:name=".activity.auth.LoginActivity"
             android:theme="@style/AppTheme.NoActionBar">
@@ -24,12 +25,11 @@
         </activity>
         <activity
             android:name=".activity.MainActivity"
-            android:theme="@style/AppTheme.NoActionBar" >
-
-        </activity>
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".fragment.feed.FeedInsertActivity" />
     </application>
-    <uses-permission android:name="android.permission.INTERNET" />
-
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
 
 </manifest>

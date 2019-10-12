@@ -1,5 +1,6 @@
 package com.app.amrescuer.activity
 
+import android.content.Intent
 import android.os.Bundle
 import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
@@ -9,6 +10,7 @@ import com.app.amrescuer.fragment.HomeFragment
 import com.app.amrescuer.fragment.SliderFragment1
 import com.app.amrescuer.R
 import com.app.amrescuer.fragment.dashboard.DashboardFragment
+import com.app.amrescuer.fragment.feed.FeedInsertActivity
 import com.app.amrescuer.fragment.profle.ProfileFragment
 import com.app.amrescuer.utils.BottomNavigationDrawerFragment
 import kotlinx.android.synthetic.main.app_bar_main.*
@@ -21,8 +23,9 @@ class MainActivity : AppCompatActivity() {
         setSupportActionBar(appbar)
 
         fab_bar.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+//                    .setAction("Action", null).show()
+            startActivity(Intent(this,FeedInsertActivity::class.java))
         }
 
 //        val navController=Navigation.findNavController(this,R.id.fragment)
@@ -33,12 +36,6 @@ class MainActivity : AppCompatActivity() {
         trasation.commit()
 
 
-
-    }
-
-    override fun onBackPressed() {
-
-            super.onBackPressed()
 
     }
 
