@@ -6,12 +6,18 @@
             name="feed"
             type="com.app.amrescuer.room.entities.Feed" />
     </data>
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:background="@color/feed_bg"
-    android:orientation="vertical" >
 
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/feed_bg"
+            android:orientation="vertical">
     <LinearLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
@@ -94,8 +100,9 @@
             android:layout_height="300dp"
             android:background="@color/white"
             feedimg="@{feed.image}"
+            android:transitionName="imagetrans"
             android:visibility="visible" />
     </LinearLayout>
-
-</LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
 </layout>

@@ -1,27 +1,26 @@
 package com.app.amrescuer.fragment.dashboard
 
-import android.content.Context
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProviders
+import androidx.navigation.fragment.FragmentNavigatorExtras
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-
 import com.app.amrescuer.R
 import com.app.amrescuer.room.entities.Feed
 import com.app.amrescuer.utils.Coroutines
 import com.app.amrescuer.utils.hide
 import com.app.amrescuer.utils.show
-import com.app.amrescuer.utils.toast
 import com.xwray.groupie.GroupAdapter
 import com.xwray.groupie.ViewHolder
 import kotlinx.android.synthetic.main.dashboard_fragment.*
-import org.kodein.di.android.x.kodein
+import kotlinx.android.synthetic.main.item_dashboard.view.*
 import org.kodein.di.KodeinAware
+import org.kodein.di.android.x.kodein
 import org.kodein.di.generic.instance
 
 class DashboardFragment : Fragment(),KodeinAware {
@@ -60,9 +59,19 @@ class DashboardFragment : Fragment(),KodeinAware {
             layoutManager=LinearLayoutManager(context)
             setHasFixedSize(true)
             adapter=adapt
+            setOnClickListener {
+
+            }
+        }
+        adapt.setOnItemClickListener { item, view ->
+
+
+            val extra = FragmentNavigatorExtras(
+                    view.feedImage1 to view.feedImage1.transitionName
+            )
+            findNavController().navigate(R.id.action_homeFragment_to_feedDetailActivity, null, null, extra)
 
         }
-
     }
 
     private fun List<Feed>.toFeedItem():List<FeedItem>{

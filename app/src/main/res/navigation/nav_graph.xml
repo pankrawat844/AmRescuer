@@ -7,7 +7,20 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.app.amrescuer.fragment.HomeFragment"
+        android:name="com.app.amrescuer.fragment.dashboard.DashboardFragment"
         android:label="fragment_home"
-        tools:layout="@layout/fragment_home" />
+        tools:layout="@layout/dashboard_fragment">
+        <action
+            android:id="@+id/action_homeFragment_to_feedDetailActivity"
+            app:destination="@id/feedDetailActivity"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/feedDetailActivity"
+        android:name="com.app.amrescuer.activity.feeddetail.FeedDetailActivity"
+        android:label="FeedDetailActivity"
+        tools:layout="@layout/activity_feed_detail" />
 </navigation>

@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="ws.wolfsoft.online_course.DetailPageActivity">
+    android:layout_height="match_parent">
 
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:background="@color/white"
         android:scrollbars="none">
 
         <LinearLayout
@@ -23,6 +20,8 @@
                 android:layout_height="wrap_content">
 
                 <ImageView
+                    android:id="@+id/img"
+                    android:transitionName="imagetrans"
                     android:layout_width="match_parent"
                     android:layout_height="230dp"
                     android:src="@drawable/img12"
